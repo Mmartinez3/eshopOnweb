@@ -9,7 +9,7 @@ env:
   LOCATION: "eastus"
   TEMPLATE: infra/webapp.bicep
   SUBSCRIPTION-ID: 56cb80bc-88d5-4c3d-8679-770ef2cb19fc
-  WEBAPP-NAME: rg-eshoponweb-labmanu02
+  WEBAPP-NAME: webappweb-labmanu02
 
 
 jobs:
@@ -40,11 +40,11 @@ jobs:
         path: ${{env.DOTNET_ROOT}}/myapp
         
     # upload the bicep template as artifacts for next job
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v3
-      with:
-        name: bicep-template
-        path: ${{ env.TEMPLATE-FILE }}
+- name: Upload artifact for deployment job
+  uses: actions/upload-artifact@v3
+  with:
+    name: bicep-template
+    path: ${{ env.TEMPLATE }}
         
   # Use Bicep to deploy infrastructure + Publish webapp 
   deploy:
