@@ -7,7 +7,7 @@ on: [push, workflow_dispatch]
 env:
   RESOURCE-GROUP: rg-eshoponweb-labmanu02
   LOCATION: "eastus"
-  TEMPLATE-FILE: infra/webapp.bicep
+  TEMPLATE: infra/webapp.bicep
   SUBSCRIPTION-ID: 56cb80bc-88d5-4c3d-8679-770ef2cb19fc
   WEBAPP-NAME: eshoponweb-webapp-labmanu02
 
