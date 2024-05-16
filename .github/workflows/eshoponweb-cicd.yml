@@ -86,7 +86,7 @@ jobs:
     
     # Publish website to Azure App Service (WebApp)
     - name: Publish Website to WebApp
-      uses: Azure/webapps-deploy@v2
+      uses: Azure/webapps-deploy@v3
       with:
         app-name: ${{ env.WEBAPP-NAME  }}
         package: .net-app
